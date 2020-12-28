@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>DBA Page</title>
+</head>
+<body>
+<h1>Dear <strong th:text="${user}"></strong>, Welcome to DBA Page</h1>
+<div sec:authorize="isAuthenticated()">
+    <a th:href="@{/admin}">Admin Page</a> | <a th:href="@{/logout}">Logout</a>
+</div>
+</body>
+</html>
